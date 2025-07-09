@@ -49,12 +49,13 @@
   display: flex;
   gap: 30px;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 90px;
 }
 
 .estimate-btn {
   color: white;
   padding: 8px 20px;
+  padding-right: 90px;
   margin-right: 40px;
   border-radius: 4px;
   cursor: pointer;
