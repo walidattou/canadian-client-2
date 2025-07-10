@@ -3,6 +3,7 @@ import ContactForm from './pages/ContactForm.jsx';
 import Services from './pages/service.jsx';
 import NavBar from './comp/nav.jsx';
 import Footer from './comp/Footer.jsx';
+import ServicesBF from './pages/services-bf.jsx';
 
 export default function Page() {
   const location = useLocation();
@@ -18,6 +19,7 @@ export default function Page() {
       <Routes>
         <Route path="/" element={<ContactForm />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/servicesBF" element={<ServicesBF />} />
         {/* Add more routes below if needed */}
       </Routes>
       

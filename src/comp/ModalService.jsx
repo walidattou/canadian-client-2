@@ -11,12 +11,13 @@ const ModalService = ({ service, onClose }) => {
         <p className="modal-subtitle">/ NOS SERVICES</p>
 
         <div className="modal-gallery">
-          <img src={service.image} className="large-img" alt="main" />
-          <div className="small-images">
-            <img src={service.image} alt="small1" />
-            <img src={service.image} alt="small2" />
+          <img src={selectedService.image} className="large-img" alt="main" />
+              <div className="small-images"style={{ display: 'flex', flexDirection: 'column' , flexWrap: 'nowrap' }}>
+                <img src={service.image} alt="small1" />
+                <img src={service.image} alt="small2" />
           </div>
         </div>
+
 
         <h2 className="modal-title">{service.title}</h2>
         <p className="modal-description">

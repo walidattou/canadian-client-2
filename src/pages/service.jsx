@@ -81,10 +81,32 @@ const ServicesSection = () => {
             <p className="modal-subtitle">/ NOS SERVICES</p>
             <div className="modal-gallery">
               <img src={selectedService.image} className="large-img" alt="main" />
-              <div className="small-images">
-                <img src={selectedService.image} alt="small1" />
-                <img src={selectedService.image} alt="small2" />
+
+              <div
+                className="hide-on-mobile"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                  maxHeight: '400px',        // Set a reasonable max height
+                  overflowY: 'auto',         // Scroll if images overflow
+                  alignItems: 'flex-start',  // Optional: align left
+                }}
+              >
+                <img
+                  src={selectedService.image}
+                  alt="1"
+                  style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
+                />
+                <img
+                  src={selectedService.image}
+                  alt="2"
+                  style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
+                />
               </div>
+
+
+
             </div>
 
             <h2 className="modal-title">{selectedService.title}</h2>

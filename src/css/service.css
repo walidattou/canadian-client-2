@@ -13,7 +13,11 @@
   text-align: left;
   margin-bottom: 50px;
 }
-
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
 .services-subtitle {
   color: #2563eb;
   font-size: 12px;
