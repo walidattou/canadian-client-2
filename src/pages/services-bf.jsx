@@ -6,7 +6,7 @@ export default function ServicesBF() {
       {/* À Propos Section */}
       <section className="about-section">
         <div className="section-header">
-          <span className="section-label">A PROPOS</span>
+          <span className="section-label">/ A PROPOS</span>
         </div>
         <h1 className="main-title">Les Services BF</h1>
         <p className="subtitle">
@@ -54,7 +54,7 @@ export default function ServicesBF() {
       {/* Notre Approche Section */}
       <section className="approach-section">
         <div className="section-header">
-          <span className="section-label">NOTRE APPROCHE</span>
+          <span className="section-label">/ NOTRE APPROCHE</span>
         </div>
         <div className="approach-content">
           <p>

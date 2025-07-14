@@ -41,7 +41,7 @@ const ServicesSection = () => {
     <section className="services-section">
       <div className="container">
         <div className="services-header">
-          <p className="services-subtitle">NOS SERVICES</p>
+          <p className="services-subtitle">/ NOS SERVICES</p>
           <h2 className="services-title">
             Valorisez vos extérieurs avec<br />
             Les Services BF

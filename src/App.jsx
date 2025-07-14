@@ -4,25 +4,27 @@ import Services from './pages/service.jsx';
 import NavBar from './comp/nav.jsx';
 import Footer from './comp/Footer.jsx';
 import ServicesBF from './pages/services-bf.jsx';
+import MainPage from './pages/main.jsx';
 
 export default function Page() {
   const location = useLocation();
 
-  // Define pages where Footer should NOT show
-  const hideFooterRoutes = ['/']; // You can add more like '/login', '/admin'
+  // Pages where NavBar or Footer shouldn't show
+  const hideFooterRoutes = ['/contact'];
+  const hideNavRoutes = ['/'];
 
   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
+  const shouldShowNav = !hideNavRoutes.includes(location.pathname);
 
   return (
     <>
-      <NavBar />
+      {shouldShowNav && <NavBar />}
       <Routes>
-        <Route path="/" element={<ContactForm />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="/services" element={<Services />} />
         <Route path="/servicesBF" element={<ServicesBF />} />
-        {/* Add more routes below if needed */}
       </Routes>
-      
       {shouldShowFooter && <Footer />}
     </>
   );
