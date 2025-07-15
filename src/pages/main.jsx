@@ -159,11 +159,20 @@ export default function ServicesBF() {
             ))}
           </div>
 
-          <div className="services-bf-website-testimonials-bottom-image-section">
-            <img src="/placeholder.svg?height=300&width=500" alt="Building exterior" />
-          </div>
+
         </div>
       </section>
+      <section className='bottom-iamges'>
+      <div className="image-container">
+        <div className="wide-image">
+          <img src="./src/images/im.jpg" alt="Wide profile" />
+        </div>
+        <div className="square-image">
+          <img src="./src/images/im.jpg" alt="Square thumbnail" />
+        </div>
+      </div>
+      </section>
+      
     </div>
   );
 }
