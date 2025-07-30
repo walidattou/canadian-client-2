@@ -1,8 +1,10 @@
 import React from 'react';
 import "../css/nav.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
+  const location = useLocation();
+
   return (
     <div>
       {/* Header Bar */}
@@ -31,19 +33,19 @@ const NavBar = () => {
           </div>
         </div>
 
-        <a className="estimate-btn">
+        <Link to="/contact" className="estimate-btn">
           Request an Estimate
-        </a>
+        </Link>
       </div>
 
       {/* Navigation */}
       <nav className="navigation">
         <ul>
-          <li><a href="#" className="nav-link">Accueil</a></li>
-          <li><a href="#" className="nav-link active">Services</a></li>
-          <li><a href="#" className="nav-link">A Propos</a></li>
-          <li><a href="#" className="nav-link">Realisation</a></li>
-          <li><a href="#" className="nav-link">Contact</a></li>
+          <li><Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Accueil</Link></li>
+          <li><Link to="/services" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}>Services</Link></li>
+          <li><Link to="/servicesBF" className={`nav-link ${location.pathname === '/servicesBF' ? 'active' : ''}`}>A Propos</Link></li>
+          <li><Link to="/beforeandafter" className={`nav-link ${location.pathname === '/beforeandafter' ? 'active' : ''}`}>Realisation</Link></li>
+          <li><Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link></li>
         </ul>
       </nav>
     </div>

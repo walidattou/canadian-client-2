@@ -5,6 +5,7 @@ import NavBar from './comp/nav.jsx';
 import Footer from './comp/Footer.jsx';
 import ServicesBF from './pages/services-bf.jsx';
 import MainPage from './pages/main.jsx';
+import BeforeAfterCarousel from './pages/Beforeandafter.jsx';
 
 export default function Page() {
   const location = useLocation();
@@ -24,6 +25,7 @@ export default function Page() {
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/services" element={<Services />} />
         <Route path="/servicesBF" element={<ServicesBF />} />
+        <Route path="/beforeandafter" element={<BeforeAfterCarousel />} />
       </Routes>
       {shouldShowFooter && <Footer />}
     </>

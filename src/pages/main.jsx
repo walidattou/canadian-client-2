@@ -159,18 +159,19 @@ export default function ServicesBF() {
             ))}
           </div>
 
+          {/* Bottom Images Section - positioned right after testimonials */}
+          <section className='bottom-images'>
+            <div className="image-container">
+              <div className="wide-image">
+                <img src="./src/images/im.jpg" alt="Wide profile" />
+              </div>
+              <div className="square-image">
+                <img src="./src/images/im.jpg" alt="Square thumbnail" />
+              </div>
+            </div>
+          </section>
 
         </div>
-      </section>
-      <section className='bottom-iamges'>
-      <div className="image-container">
-        <div className="wide-image">
-          <img src="./src/images/im.jpg" alt="Wide profile" />
-        </div>
-        <div className="square-image">
-          <img src="./src/images/im.jpg" alt="Square thumbnail" />
-        </div>
-      </div>
       </section>
       
     </div>
