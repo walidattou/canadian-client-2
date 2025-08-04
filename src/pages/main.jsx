@@ -1,9 +1,44 @@
 import React, { useState } from 'react';
+import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import "../css/main.css";
 import "../css/service.css";
 
-export default function ServicesBF() {
+export default function MainPage() {
   const [selectedService, setSelectedService] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const googleReviews = [
+    {
+      name: "Sophie Poirier",
+      review: "Service très courtois et travail minutieux. Je recommande sans aucune hésitation."
+    },
+    {
+      name: "Maryse St-Amant",
+      review: "William est venu faire le lavage des vitres extérieures chez-moi, le 23 mai 2024, je suis très satisfaite du travail accompli. Ils utilisent une nouvelle technologie, il brosse la vitre plusieurs fois. A1 dans tout!"
+    },
+    {
+      name: "Eugénie Lemire-Théberge",
+      review: "Tout c'est bien déroulé, je recommande sans appelle à eux annuellement c'est certain!"
+    },
+    {
+      name: "Jérôme Morelle",
+      review: "Très satisfait du service de nettoyage. L'équipe est professionnelle et le résultat impeccable."
+    },
+    {
+      name: "Sylvain Lemaire",
+      review: "Service excellent, ponctuel et soigné. Je recommande vivement Les Services BF."
+    },
+    {
+      name: "Mélanie Morelle",
+      review: "Travail de qualité et équipe très professionnelle. Nos vitres n'ont jamais été aussi propres!"
+    }
+  ];
+
+
 
   const services = [
     {
@@ -25,6 +60,26 @@ export default function ServicesBF() {
   return (
     <div className="services-bf-website-main-page-container">
       
+      {/* Top Blue Strip */}
+      <div className="top-blue-strip">
+        <div className="top-strip-content">
+          <div className="phone-section">
+            <Phone className="phone-icon" size={16} />
+            <span>+1 819-588-5224</span>
+          </div>
+          <div className="center-text">
+            VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES
+          </div>
+          <div className="social-section">
+            <a href="#" className="social-icon facebook">f</a>
+            <div className="language-selector">
+              <span>FR</span>
+              <span className="dropdown-arrow">▼</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="services-bf-website-navigation-header-section">
         <div className="services-bf-website-header-content-wrapper-container">
@@ -50,7 +105,7 @@ export default function ServicesBF() {
           muted
           playsInline
         >
-          <source src="src/BG_video/Bghero.mp4" type="video/mp4" />
+          <source src="/src/BG_video/Bghero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -70,6 +125,16 @@ export default function ServicesBF() {
               DEMANDEZ VOTRE DEVIS →
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* New Section - Property Types */}
+      <section className="property-types-section">
+        <div className="property-types-content">
+          <div className="property-dot"></div>
+          <h2 className="property-types-title">
+            RÉSIDENTIEL - IMMEUBLES LOCATIFS - COMMERCIAL
+          </h2>
         </div>
       </section>
 
@@ -116,63 +181,72 @@ export default function ServicesBF() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="services-bf-website-testimonials-reviews-section">
-        <div className="services-bf-website-testimonials-content-wrapper-container">
-          <div className="services-bf-website-testimonials-section-header-area">
-            <span className="services-bf-website-testimonials-blue-tag-label">/ TÉMOIGNAGES</span>
+      {/* Google-Style Testimonials Carousel Section */}
+      <section className="google-testimonials-section">
+        <div className="testimonials-background">
+          <img src="/images/reviewBI.jpg" alt="Background" className="testimonials-bg-image" />
+          <div className="testimonials-overlay"></div>
+        </div>
+        
+        <div className="testimonials-content">
+          <div className="testimonials-header">
+            <span className="testimonials-blue-tag">/ TÉMOIGNAGES</span>
+            <h2 className="testimonials-title">
+              Avis Google de nos clients
+            </h2>
           </div>
-          <h2 className="services-bf-website-testimonials-main-section-title">
-              Témoignages authentiques
-              <br />
-              de clients satisfaits
-          </h2>
 
-          <div className="services-bf-website-testimonials-cards-grid-layout">
-            {[
-              {
-                name: "Jérôme Morelle",
-                review: "Très satisfait du service de nettoyage. L'équipe est professionnelle et le résultat impeccable."
-              },
-              {
-                name: "Sylvain Lemaire",
-                review: "Service excellent, ponctuel et soigné. Je recommande vivement Les Services BF."
-              },
-              {
-                name: "Mélanie Morelle",
-                review: "Travail de qualité et équipe très professionnelle. Nos vitres n'ont jamais été aussi propres!"
-              }
-            ].map((testimonial, idx) => (
-              <div className="services-bf-website-individual-testimonial-card" key={idx}>
-                <div className="services-bf-website-testimonial-card-header-section">
-                  <div className="services-bf-website-client-information-area">
-                    <div className="services-bf-website-client-avatar-circle"></div>
-                    <div>
-                      <h4>{testimonial.name}</h4>
-                      <div className="services-bf-website-five-star-rating-display">★★★★★</div>
+          <div className="testimonials-carousel">
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={3}
+              centeredSlides={true}
+              loop={true}
+              className="testimonials-swiper"
+            >
+              {googleReviews.map((review, index) => (
+                <SwiperSlide key={index}>
+                  <div className="testimonial-card">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4 className="reviewer-name">{review.name}</h4>
+                        <div className="star-rating">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i} className="star">★</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="review-text">{review.review}</p>
+                    <div className="google-logo">
+                      <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                      </svg>
+                      <span className="google-text">Google</span>
                     </div>
                   </div>
-                </div>
-                <h5>Sparkling Clean Home</h5>
-                <p>{testimonial.review}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Images Section - positioned right after testimonials */}
-          <section className='bottom-images'>
-            <div className="image-container">
-              <div className="wide-image">
-                <img src="./src/images/im.jpg" alt="Wide profile" />
-              </div>
-              <div className="square-image">
-                <img src="./src/images/im.jpg" alt="Square thumbnail" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            
+            <div className="carousel-bottom-section">
+              <div className="bottom-arrows">
+                <button className="bottom-arrow left-arrow">
+                  <ChevronLeft size={20} />
+                </button>
+                <button className="bottom-arrow right-arrow">
+                  <ChevronRight size={20} />
+                </button>
               </div>
             </div>
-          </section>
-
+          </div>
         </div>
       </section>
+
+
       
     </div>
   );
