@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, ChevronDown, Send, User, Building, Wrench, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import "../css/ContactForm.css";
 import "../css/main.css";
 
@@ -53,24 +54,24 @@ const ContactForm = () => {
       <header className="services-bf-website-navigation-header-section">
         <div className="services-bf-website-header-content-wrapper-container">
           <div className="services-bf-website-company-logo-section">
-            <a href="/" className="services-bf-website-logo-link">
+            <Link to="/" className="services-bf-website-logo-link">
               <img 
                 src="/images/logo.png" 
                 alt="Les Services BF Logo" 
                 className="services-bf-website-logo-image"
               />
-            </a>
+            </Link>
           </div>
           <nav className="services-bf-website-main-navigation-menu">
-            <a href="/" className="services-bf-website-nav-menu-link">ACCUEIL</a>
-            <a href="/services" className="services-bf-website-nav-menu-link">SERVICES</a>
-            <a href="/servicesBF" className="services-bf-website-nav-menu-link">À PROPOS</a>
-            <a href="/beforeandafter" className="services-bf-website-nav-menu-link">NOS RÉALISATIONS</a>
-            <a href="/contact" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">CONTACT</a>
-            <a href="/contact" className="main-submission-button">
+            <Link to="/" className="services-bf-website-nav-menu-link">ACCUEIL</Link>
+            <Link to="/services" className="services-bf-website-nav-menu-link">SERVICES</Link>
+            <Link to="/servicesBF" className="services-bf-website-nav-menu-link">À PROPOS</Link>
+            <Link to="/beforeandafter" className="services-bf-website-nav-menu-link">NOS RÉALISATIONS</Link>
+            <Link to="/contact" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">CONTACT</Link>
+            <Link to="/contact" className="main-submission-button">
               <span className="button-text">SOUMISSION</span>
         
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
