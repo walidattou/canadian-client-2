@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "accueil": "ACCUEIL",
+    "services": "SERVICES",
+    "aPropos": "À PROPOS",
+    "realisations": "NOS RÉALISATIONS",
+    "contact": "CONTACT",
+    "soumission": "SOUMISSION"
+  },
+  "hero": {
+    "title": "Vos experts en entretiens extérieurs d'immeubles",
+    "subtitle": "VOTRE PROPRIÉTÉ, NOTRE PRIORITÉ!",
+    "cta": "DEMANDE DE SOUMISSION"
+  },
+  "topStrip": {
+    "phone": "+1 819-588-5224",
+    "tagline": "VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES"
+  },
+  "services": {
+    "title": "Valorisez vos extérieurs avec Les Services BF",
+    "subtitle": "/ NOS SERVICES",
+    "viewMore": "Voir plus",
+    "lavageVitres": {
+      "title": "LAVAGE DE VITRES",
+      "description": "Service de nettoyage professionnel pour vos vitres et surfaces vitrées",
+      "longDescription": "Le lavage de vitres présente plusieurs avantages. Tout d'abord, cela améliore l'apparence générale de votre maison ou de votre entreprise en rendant vos fenêtres propres et transparentes. Cela permet également à plus de lumière naturelle de pénétrer à l'intérieur, ce qui crée une atmosphère plus lumineuse et agréable. De plus, le lavage régulier des fenêtres peut prolonger leur durée de vie en éliminant la saleté, la poussière et les contaminants qui pourraient les endommager. Enfin, cela peut également contribuer à maintenir la qualité de l'isolation thermique de vos fenêtres. Donc, en résumé, le lavage de vitres offre à la fois des avantages esthétiques et pratiques !"
+    },
+    "nettoyageExterieur": {
+      "title": "NETTOYAGE EXTÉRIEUR",
+      "description": "Nettoyage complet des façades et surfaces extérieures de votre propriété",
+      "longDescription": "Le nettoyage extérieur présente de nombreux avantages ! On utilise des produits spéciaux et de l'eau à basse pression pour nettoyer les surfaces extérieures de votre maison, comme les revêtements , les toitures et les moisissures. Les avantages incluent un nettoyage en douceur, une meilleure préservation des matériaux et une élimination efficace des saletés. C'est une excellente option pour garder votre maison propre et en bon état !"
+    },
+    "entretienGouttieres": {
+      "title": "ENTRETIEN DE GOUTTIÈRES",
+      "description": "Maintenance et nettoyage professionnel de vos systèmes de gouttières",
+      "longDescription": "L'entretien des gouttières est important pour plusieurs raisons. Tout d'abord, les gouttières jouent un rôle essentiel dans la gestion des eaux pluviales en les dirigeant loin de votre maison. Lorsque les gouttières sont obstruées par des feuilles, des débris ou des nids d'oiseaux, l'eau peut déborder et causer des dommages aux fondations, aux murs et aux sous-sols de votre maison. En nettoyant régulièrement vos gouttières, vous pouvez prévenir ces problèmes et maintenir l'intégrité de votre maison. De plus, l'entretien des gouttières peut également contribuer à prolonger leur durée de vie en évitant l'accumulation de débris qui pourrait les endommager. Donc, pour protéger votre maison et préserver vos gouttières, il est important de les entretenir régulièrement !"
+    },
+    "lavagePression": {
+      "title": "LAVAGE À PRESSION",
+      "description": "Service de nettoyage haute pression pour terrasses, allées et façades",
+      "longDescription": "Le lavage à pression est une méthode de nettoyage qui utilise de l'eau sous pression pour enlever la saleté, les taches et les dépôts tenaces sur différentes surfaces. On utilise généralement un appareil spécialisé, comme un nettoyeur haute pression, pour projeter un jet d'eau puissant sur la surface à nettoyer. Cela permet d'éliminer efficacement la saleté sans avoir à frotter intensément. C'est une méthode pratique et efficace pour nettoyer les terrasses, le béton, le pavé uni et d'autres surfaces extérieures."
+    }
+  },
+  "propertyTypes": {
+    "title": "RÉSIDENTIEL - IMMEUBLES LOCATIFS - COMMERCIAL"
+  },
+  "testimonials": {
+    "title": "Avis Google de nos clients",
+    "subtitle": "/ TÉMOIGNAGES"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "dès aujourd'hui",
+    "description": "Obtenez une soumission gratuite pour vos services d'entretien extérieur d'immeubles.",
+    "phone": {
+      "title": "Téléphone",
+      "number": "+1 819-588-5224",
+      "hours": "Lun - Ven, 8h00 - 17h00"
+    },
+    "email": {
+      "title": "Email",
+      "address": "lesservicesbf@gmail.com",
+      "response": "Réponse sous 24h"
+    },
+    "location": {
+      "title": "Zone de service",
+      "area": "Estrie et Centre du Québec",
+      "info": "Déplacements gratuits"
+    },
+    "form": {
+      "title": "Demande de soumission",
+      "subtitle": "Remplissez le formulaire et nous vous contacterons rapidement",
+      "personalInfo": "Informations personnelles",
+      "projectAddress": "Adresse du projet",
+      "requiredServices": "Services requis",
+      "requestType": "Type de demande",
+      "submit": "Envoyer ma demande",
+      "guarantee": "Réponse garantie sous 24h • Soumission gratuite • Sans engagement"
+    }
+  },
+  "about": {
+    "title": "Les Services BF – Votre partenaire de confiance en entretien extérieur d'immeubles",
+    "description": "Depuis plusieurs années, notre équipe offre un service d'entretien extérieur professionnel et sans compromis. Résultat : des clients satisfaits, des immeubles impeccables et une réputation bâtie sur l'excellence à travers l'Estrie et le Centre du Québec.",
+    "approach": {
+      "title": "NOTRE APPROCHE",
+      "description": "Chez Les Services BF, nous savons combien il est important pour vous de confier l'entretien de votre immeuble à une équipe de confiance. C'est pourquoi nous prenons le temps d'écouter vos besoins et de vous offrir un service personnalisé, attentif et respectueux de votre propriété. Notre équipe passionnée intervient avec soin et professionnalisme, en choisissant les meilleures méthodes pour préserver la beauté et la longévité de votre propriété. Tout au long de notre collaboration, nous restons à votre écoute et disponibles pour vous accompagner, avec transparence et réactivité afin de vous garantir un service fiable et parfaitement adapté à vos attentes."
+    },
+    "values": {
+      "title": "NOS VALEURS DANS VOS PROJETS",
+      "excellence": {
+        "title": "EXCELLENCE",
+        "description": "Nous nous engageons à fournir un service irréprochable, alliant savoir-faire technique et souci du détail, pour des résultats toujours à la hauteur de vos attentes."
+      },
+      "fiabilite": {
+        "title": "FIABILITÉ",
+        "description": "La confiance de nos clients est essentielle. Nous respectons nos engagements, intervenons ponctuellement et assurons un suivi constant pour votre entière tranquillité."
+      },
+      "proximite": {
+        "title": "PROXIMITÉ",
+        "description": "À l'écoute et disponibles, nous construisons une relation de partenariat durable avec chacun de nos clients, en adaptant nos services à leurs besoins spécifiques."
+      }
+    }
+  },
+  "footer": {
+    "description": "Les Services BF est une entreprise spécialisée dans l'entretien extérieur d'immeuble résidentiel et commercial. Nous offrons une gamme complète de services. Notre objectif est de vous aider à maintenir votre propriété propre et en bon état tout au long de l'année!",
+    "navigation": {
+      "title": "Navigation",
+      "accueil": "Accueil",
+      "aPropos": "À Propos",
+      "services": "Services",
+      "realisations": "Réalisations",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "lavageVitres": "LAVAGE DE VITRES",
+      "entretienGouttieres": "ENTRETIEN DE GOUTTIÈRES",
+      "nettoyageExterieur": "NETTOYAGE EXTÉRIEUR",
+      "lavagePression": "LAVAGE À PRESSION"
+    }
+  },
+  "modal": {
+    "subtitle": "/ NOS SERVICES",
+    "back": "Retour",
+    "submission": "Soumission"
+  },
+  "form": {
+    "fields": {
+      "nom": "Nom",
+      "prenom": "Prénom",
+      "email": "Adresse email",
+      "telephone": "Téléphone (ex: +1 819-588-5224)",
+      "adresse": "Adresse complète",
+      "ville": "Ville",
+      "codePostal": "Code postal",
+      "province": "Province",
+      "servicesAdditionnels": "Services additionnels",
+      "typeDemande": "Sélectionnez le type de demande",
+      "soumission": "Demander une soumission",
+      "devis": "Demander un devis",
+      "information": "Demander des informations",
+      "urgence": "Service d'urgence"
+    }
+  }
+} 

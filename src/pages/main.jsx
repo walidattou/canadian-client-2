@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -6,10 +6,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import "../css/main.css";
 import "../css/service.css";
+import "../css/ModalService.css";
+import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function MainPage() {
   const [selectedService, setSelectedService] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const swiperRef = useRef(null);
+  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const googleReviews = [
     {
@@ -42,24 +48,32 @@ export default function MainPage() {
 
   const services = [
     {
-      id: 1,
-      title: "LAVAGE DE VITRES",
-      shortDescription: "Service de nettoyage professionnel pour vos vitres et surfaces vitrées",
-      longDescription: "Le lavage de vitres présente plusieurs avantages. Tout d’abord, cela améliore l’apparence générale de votre maison ou de votre entreprise en rendant vos fenêtres propres et transparentes. Cela permet également à plus de lumière naturelle de pénétrer à l’intérieur, ce qui crée une atmosphère plus lumineuse et agréable. De plus, le lavage régulier des fenêtres peut prolonger leur durée de vie en éliminant la saleté, la poussière et les contaminants qui pourraient les endommager. Enfin, cela peut également contribuer à maintenir la qualité de l’isolation thermique de vos fenêtres.",
-      image: "./src/images/im.jpg"
+        id: 1,
+        title: "LAVAGE DE VITRES",
+        shortDescription: "Service de nettoyage professionnel pour vos vitres et surfaces vitrées",
+        longDescription: "Le lavage de vitres présente plusieurs avantages. Tout d'abord, cela améliore l'apparence générale de votre maison ou de votre entreprise en rendant vos fenêtres propres et transparentes. Cela permet également à plus de lumière naturelle de pénétrer à l'intérieur, ce qui crée une atmosphère plus lumineuse et agréable. De plus, le lavage régulier des fenêtres peut prolonger leur durée de vie en éliminant la saleté, la poussière et les contaminants qui pourraient les endommager. Enfin, cela peut également contribuer à maintenir la qualité de l'isolation thermique de vos fenêtres. Donc, en résumé, le lavage de vitres offre à la fois des avantages esthétiques et pratiques !",
+        mainImage: "/windowcleaning/windowCleaning.JPG",
+        galleryImages: [
+            "/windowcleaning/windowCleaning2.JPG",
+            "/windowcleaning/windowCleaning3.jpg"
+        ]
     },
     {
-      id: 2,
-      title: "NETTOYAGE EXTÉRIEUR",
-      shortDescription: "Nettoyage complet des façades et surfaces extérieures de votre propriété",
-      longDescription: "Le nettoyage extérieur présente de nombreux avantages ! On utilise des produits spéciaux et de l’eau à basse pression pour nettoyer les surfaces extérieures de votre maison, comme les revêtements , les toitures et les moisissures. Les avantages incluent un nettoyage en douceur, une meilleure préservation des matériaux et une élimination efficace des saletés.",
-      image: "./src/images/im.jpg"
-    }
+        id: 2,
+        title: "NETTOYAGE EXTÉRIEUR",
+        shortDescription: "Nettoyage complet des façades et surfaces extérieures de votre propriété",
+        longDescription: "Le nettoyage extérieur présente de nombreux avantages ! On utilise des produits spéciaux et de l'eau à basse pression pour nettoyer les surfaces extérieures de votre maison, comme les revêtements , les toitures et les moisissures. Les avantages incluent un nettoyage en douceur, une meilleure préservation des matériaux et une élimination efficace des saletés. C'est une excellente option pour garder votre maison propre et en bon état !",
+        mainImage: "/outside/Exteruir.jpg",
+        galleryImages: [
+            "/outside/Exteruir2.jpg",
+            "/outside/Exteruir3.jpg"
+        ]
+    },
+
   ];
 
   return (
     <div className="services-bf-website-main-page-container">
-      
       {/* Top Blue Strip */}
       <div className="top-blue-strip">
         <div className="top-strip-content">
@@ -68,30 +82,35 @@ export default function MainPage() {
             <span>+1 819-588-5224</span>
           </div>
           <div className="center-text">
-            VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES
+            {t('topStrip.tagline')}
           </div>
           <div className="social-section">
             <a href="#" className="social-icon facebook">f</a>
-            <div className="language-selector">
-              <span>FR</span>
-              <span className="dropdown-arrow">▼</span>
-            </div>
           </div>
         </div>
       </div>
-
+      
       {/* Header */}
       <header className="services-bf-website-navigation-header-section">
         <div className="services-bf-website-header-content-wrapper-container">
           <div className="services-bf-website-company-logo-section">
-            <div className="services-bf-website-logo-icon-blue-square">BF</div>
+            <Link to="/" className="services-bf-website-logo-link">
+              <img 
+                src="/src/images/logo.png" 
+                alt="Les Services BF Logo" 
+                className="services-bf-website-logo-image"
+              />
+            </Link>
           </div>
           <nav className="services-bf-website-main-navigation-menu">
-            <a href="#" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">ACCUEIL</a>
-            <a href="#" className="services-bf-website-nav-menu-link">SERVICES</a>
-            <a href="#" className="services-bf-website-nav-menu-link">À PROPOS</a>
-            <a href="#" className="services-bf-website-nav-menu-link">NOS RÉALISATIONS</a>
-            <a href="#" className="services-bf-website-nav-menu-link">CONTACT</a>
+            <Link to="/" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">{t('nav.accueil')}</Link>
+            <Link to="/services" className="services-bf-website-nav-menu-link">{t('nav.services')}</Link>
+            <Link to="/servicesBF" className="services-bf-website-nav-menu-link">{t('nav.aPropos')}</Link>
+            <Link to="/beforeandafter" className="services-bf-website-nav-menu-link">{t('nav.realisations')}</Link>
+            <Link to="/contact" className="services-bf-website-nav-menu-link">{t('nav.contact')}</Link>
+            <Link to="/contact" className="main-submission-button">
+              <span className="button-text">{t('nav.soumission')}</span>
+            </Link>
           </nav>
         </div>
       </header>
@@ -114,16 +133,14 @@ export default function MainPage() {
         <div className="services-bf-website-hero-content-wrapper-container">
           <div className="services-bf-website-hero-text-content-area">
             <h2 className="services-bf-website-hero-blue-subtitle-text">
-              VOTRE PROPRIÉTÉ, NOTRE PRIORITÉ!
+              {t('hero.subtitle')}
             </h2>
             <h1 className="services-bf-website-hero-main-title-heading">
-              Vos experts en entretiens
-              <br />
-              extérieurs d'immeubles
+              {t('hero.title')}
             </h1>
-            <button className="services-bf-website-hero-cta-button-primary">
-              DEMANDEZ VOTRE DEVIS →
-            </button>
+            <Link to="/contact" className="services-bf-website-hero-cta-button-primary">
+              {t('hero.cta')}
+            </Link>
           </div>
         </div>
       </section>
@@ -133,7 +150,7 @@ export default function MainPage() {
         <div className="property-types-content">
           <div className="property-dot"></div>
           <h2 className="property-types-title">
-            RÉSIDENTIEL - IMMEUBLES LOCATIFS - COMMERCIAL
+            {t('propertyTypes.title')}
           </h2>
         </div>
       </section>
@@ -142,14 +159,12 @@ export default function MainPage() {
       {/* Services Section */}
       <section className="services-bf-website-services-showcase-section">
         <div className="services-bf-website-services-content-wrapper-container">
-          <span className="services-bf-website-services-blue-tag-label">/ NOS SERVICES</span>
+          <span className="services-bf-website-services-blue-tag-label">{t('services.subtitle')}</span>
           <div className="services-bf-website-services-section-header-area">
             <h2 className="services-bf-website-services-main-section-title">
-              Valorisez vos extérieurs
-              <br />
-              avec Les Services BF
+              {t('services.title')}
             </h2>
-            <button className="services-bf-website-services-view-more-button">Voir plus</button>
+            <Link to="/services" className="services-bf-website-services-view-more-button">{t('services.viewMore')}</Link>
           </div>
 
 
@@ -163,7 +178,7 @@ export default function MainPage() {
                 style={{ cursor: 'pointer' }}
               >
                 <div className="card-image">
-                  <img src={service.image || "/placeholder.svg"} alt={service.title} />
+                  <img src={service.mainImage || service.image || "/placeholder.svg"} alt={service.title} />
                   <div className="service-icon">
                     <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.4519 13.4994H22.1182" stroke="white" strokeWidth="2.23804" strokeLinecap="round" strokeLinejoin="round" />
@@ -190,9 +205,9 @@ export default function MainPage() {
         
         <div className="testimonials-content">
           <div className="testimonials-header">
-            <span className="testimonials-blue-tag">/ TÉMOIGNAGES</span>
+            <span className="testimonials-blue-tag">{t('testimonials.subtitle')}</span>
             <h2 className="testimonials-title">
-              Avis Google de nos clients
+              {t('testimonials.title')}
             </h2>
           </div>
 
@@ -203,6 +218,19 @@ export default function MainPage() {
               centeredSlides={true}
               loop={true}
               className="testimonials-swiper"
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              modules={[Navigation]}
+              navigation={{
+                nextEl: '.right-arrow',
+                prevEl: '.left-arrow',
+              }}
+              breakpoints={{
+                640: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+              }}
             >
               {googleReviews.map((review, index) => (
                 <SwiperSlide key={index}>
@@ -246,7 +274,49 @@ export default function MainPage() {
         </div>
       </section>
 
+      {/* Modal */}
+      {selectedService && (
+        <div className="modal-overlay" onClick={() => setSelectedService(null)}>
+          <div className="modal-wrapper" onClick={e => e.stopPropagation()}>
+            <p className="modal-subtitle">{t('modal.subtitle')}</p>
+            <div className="modal-gallery">
+              <img src={selectedService.mainImage} className="large-img" alt="main" />
 
+              <div
+                className="hide-on-mobile"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                  maxHeight: '400px',
+                  overflowY: 'auto',
+                  alignItems: 'flex-start',
+                }}
+              >
+                {selectedService.galleryImages.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`gallery-${index + 1}`}
+                    style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <h2 className="modal-title">{selectedService.title}</h2>
+            <p className="modal-description">{selectedService.longDescription}</p>
+
+            <div className="modal-actions">
+              <button className="btn-outline" onClick={() => setSelectedService(null)}>{t('modal.back')}</button>
+              <button className="btn-filled" onClick={() => {
+                setSelectedService(null);
+                navigate('/contact');
+              }}>{t('modal.submission')}</button>
+            </div>
+          </div>
+        </div>
+      )}
       
     </div>
   );

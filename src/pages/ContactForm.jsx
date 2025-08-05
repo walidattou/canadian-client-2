@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Phone, Mail, MapPin, Clock, Facebook, ChevronDown, Send, User, Building, Wrench, FileText } from 'lucide-react';
 import "../css/ContactForm.css";
+import "../css/main.css";
 
 const ContactForm = () => {
-  
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -27,158 +28,271 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    alert('Formulaire soumis avec succès!');
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-page-container">
+      {/* Top Blue Strip */}
+      <div className="top-blue-strip">
+        <div className="top-strip-content">
+          <div className="phone-section">
+            <Phone className="phone-icon" size={16} />
+            <span>+1 819-588-5224</span>
+          </div>
+          <div className="center-text">
+            VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES
+          </div>
+          <div className="social-section">
+            <a href="#" className="social-icon facebook">f</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="services-bf-website-navigation-header-section">
+        <div className="services-bf-website-header-content-wrapper-container">
+          <div className="services-bf-website-company-logo-section">
+            <a href="/" className="services-bf-website-logo-link">
+              <img 
+                src="/src/images/logo.png" 
+                alt="Les Services BF Logo" 
+                className="services-bf-website-logo-image"
+              />
+            </a>
+          </div>
+          <nav className="services-bf-website-main-navigation-menu">
+            <a href="/" className="services-bf-website-nav-menu-link">ACCUEIL</a>
+            <a href="/services" className="services-bf-website-nav-menu-link">SERVICES</a>
+            <a href="/servicesBF" className="services-bf-website-nav-menu-link">À PROPOS</a>
+            <a href="/beforeandafter" className="services-bf-website-nav-menu-link">NOS RÉALISATIONS</a>
+            <a href="/contact" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">CONTACT</a>
+            <a href="/contact" className="main-submission-button">
+              <span className="button-text">SOUMISSION</span>
+        
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* Main Content */}
-      <div className="main-content">
-        <div className="form-section">
-          <h2 className="form-title"></h2>
-          
-          <form onSubmit={handleSubmit} className="contact-form">
-            {/* Row 1: Nom and Prenom */}
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="nom">Nom</label>
-                <input
-                  type="text"
-                  id="nom"
-                  name="nom"
-                  placeholder="Nom"
-                  value={formData.nom}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="prenom">Prenom</label>
-                <input
-                  type="text"
-                  id="prenom"
-                  name="prenom"
-                  placeholder="Prenom"
-                  value={formData.prenom}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            {/* Row 2: E-mail and Telephone */}
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="email">E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="telephone">Telephone</label>
-                <input
-                  type="tel"
-                  id="telephone"
-                  name="telephone"
-                  placeholder="ex: +1..."
-                  value={formData.telephone}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            {/* Row 3: Adresse and Ville */}
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="adresse">Adresse</label>
-                <input
-                  type="text"
-                  id="adresse"
-                  name="adresse"
-                  placeholder="Adresse"
-                  value={formData.adresse}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="ville">Ville</label>
-                <input
-                  type="text"
-                  id="ville"
-                  name="ville"
-                  placeholder="Ville"
-                  value={formData.ville}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            {/* Row 4: Code Postal and Ville */}
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="codePostal">Code Postal</label>
-                <input
-                  type="text"
-                  id="codePostal"
-                  name="codePostal"
-                  placeholder="Code Postal"
-                  value={formData.codePostal}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="ville2">Ville</label>
-                <input
-                  type="text"
-                  id="ville2"
-                  name="ville2"
-                  placeholder="Ville"
-                  value={formData.ville2}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            {/* Row 5: Services and Services Choisis */}
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="services">Services</label>
-                <select
-                  id="services"
-                  name="services"
-                  value={formData.services}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Choisir Services</option>
-                  <option value="service1">Service 1</option>
-                  <option value="service2">Service 2</option>
-                  <option value="service3">Service 3</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="servicesChoisis">Services Choisis</label>
-                <input
-                  type="text"
-                  id="servicesChoisis"
-                  name="servicesChoisis"
-                  placeholder="Services Choisis"
-                  value={formData.servicesChoisis}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            {/* Submit Button */}
-            <button type="submit" className="submit-btn">
-              Soumettre
-            </button>
-          </form>
+      <div className="contact-main-content">
+        <div className="contact-background-elements">
+          <div className="bg-element bg-element-1"></div>
+          <div className="bg-element bg-element-2"></div>
         </div>
 
-        {/* Blue Diagonal Background */}
-        <div className="blue-diagonal"></div>
+        <div className="contact-content-wrapper">
+          <div className="contact-grid">
+            
+            {/* Left Side - Contact Info */}
+            <div className="contact-info-section">
+              <div className="contact-header">
+                <h1 className="contact-title">
+                  Contactez-nous
+                  <span className="contact-subtitle">dès aujourd'hui</span>
+                </h1>
+                <p className="contact-description">
+                  Obtenez une soumission gratuite pour vos services d'entretien extérieur d'immeubles.
+                </p>
+              </div>
+
+              <div className="contact-cards">
+                <div className="contact-card">
+                  <div className="contact-card-icon phone-icon-bg">
+                    <Phone className="contact-icon" size={20} />
+                  </div>
+                  <div className="contact-card-content">
+                    <h3 className="contact-card-title">Téléphone</h3>
+                    <p className="contact-card-text">+1 819-588-5224</p>
+                    <p className="contact-card-subtext">Lun - Ven, 8h00 - 17h00</p>
+                  </div>
+                </div>
+
+                <div className="contact-card">
+                  <div className="contact-card-icon email-icon-bg">
+                    <Mail className="contact-icon" size={20} />
+                  </div>
+                  <div className="contact-card-content">
+                    <h3 className="contact-card-title">Email</h3>
+                    <p className="contact-card-text">lesservicesbf@gmail.com</p>
+                    <p className="contact-card-subtext">Réponse sous 24h</p>
+                  </div>
+                </div>
+
+                <div className="contact-card">
+                  <div className="contact-card-icon location-icon-bg">
+                    <MapPin className="contact-icon" size={20} />
+                  </div>
+                  <div className="contact-card-content">
+                    <h3 className="contact-card-title">Zone de service</h3>
+                    <p className="contact-card-text">Estrie et Centre du Québec</p>
+                    <p className="contact-card-subtext">Déplacements gratuits</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Form */}
+            <div className="contact-form-section">
+              <div className="form-container">
+                <div className="form-background-pattern"></div>
+                
+                <div className="form-content">
+                  <div className="form-header">
+                    <h2 className="form-title">Demande de soumission</h2>
+                    <p className="form-subtitle">Remplissez le formulaire et nous vous contacterons rapidement</p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="contact-form">
+                    {/* Personal Info Section */}
+                    <div className="form-section">
+                      <div className="section-header">
+                        <User className="section-icon" size={20} />
+                        <h3 className="section-title">Informations personnelles</h3>
+                      </div>
+                      
+                      <div className="form-row">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            name="nom"
+                            placeholder="Nom"
+                            value={formData.nom}
+                            onChange={handleInputChange}
+                            className="form-input"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            name="prenom"
+                            placeholder="Prénom"
+                            value={formData.prenom}
+                            onChange={handleInputChange}
+                            className="form-input"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-row">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Adresse email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                        <input
+                          type="tel"
+                          name="telephone"
+                          placeholder="Téléphone (ex: +1 819-588-5224)"
+                          value={formData.telephone}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Address Section */}
+                    <div className="form-section">
+                      <div className="section-header">
+                        <Building className="section-icon" size={20} />
+                        <h3 className="section-title">Adresse du projet</h3>
+                      </div>
+                      
+                      <input
+                        type="text"
+                        name="adresse"
+                        placeholder="Adresse complète"
+                        value={formData.adresse}
+                        onChange={handleInputChange}
+                        className="form-input full-width"
+                      />
+
+                      <div className="form-row three-columns">
+                        <input
+                          type="text"
+                          name="ville"
+                          placeholder="Ville"
+                          value={formData.ville}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                        <input
+                          type="text"
+                          name="codePostal"
+                          placeholder="Code postal"
+                          value={formData.codePostal}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                        <input
+                          type="text"
+                          name="ville2"
+                          placeholder="Province"
+                          value={formData.ville2}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Services Section */}
+                    <div className="form-section">
+                      <div className="section-header">
+                        <Wrench className="section-icon" size={20} />
+                        <h3 className="section-title">Services requis</h3>
+                      </div>
+                      
+                      <div className="form-row">
+                        <div className="form-group select-group">
+                          <select
+                            name="services"
+                            value={formData.services}
+                            onChange={handleInputChange}
+                            className="form-select"
+                          >
+                            <option value="">Sélectionnez un service</option>
+                            <option value="lavage-vitres">LAVAGE DE VITRES</option>
+                            <option value="nettoyage-exterieur">NETTOYAGE EXTÉRIEUR</option>
+                            <option value="entretien-gouttieres">ENTRETIEN DE GOUTTIÈRES</option>
+                            <option value="lavage-pression">LAVAGE À PRESSION</option>
+                          </select>
+                          <ChevronDown className="select-arrow" size={20} />
+                        </div>
+                        <input
+                          type="text"
+                          name="servicesChoisis"
+                          placeholder="Services additionnels"
+                          value={formData.servicesChoisis}
+                          onChange={handleInputChange}
+                          className="form-input"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      className="submit-button"
+                    >
+                      <Send size={20} />
+                      Envoyer ma demande
+                    </button>
+                  </form>
+
+                  <div className="form-footer">
+                    <p className="form-footer-text">
+                      <strong>Réponse garantie sous 24h</strong> • Soumission gratuite • Sans engagement
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

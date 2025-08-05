@@ -1,50 +1,112 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import '../css/service.css';
-import '../css/ModalService.css'; // 👈 make sure this contains modal styles
+import '../css/ModalService.css';
+import '../css/main.css';
 
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(null);
+  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const services = [
     {
         id: 1,
-        title: "LAVAGE DE VITRES",
-        shortDescription: "Service de nettoyage professionnel pour vos vitres et surfaces vitrées",
-        longDescription: "Le lavage de vitres présente plusieurs avantages. Tout d’abord, cela améliore l’apparence générale de votre maison ou de votre entreprise en rendant vos fenêtres propres et transparentes. Cela permet également à plus de lumière naturelle de pénétrer à l’intérieur, ce qui crée une atmosphère plus lumineuse et agréable. De plus, le lavage régulier des fenêtres peut prolonger leur durée de vie en éliminant la saleté, la poussière et les contaminants qui pourraient les endommager. Enfin, cela peut également contribuer à maintenir la qualité de l’isolation thermique de vos fenêtres. Donc, en résumé, le lavage de vitres offre à la fois des avantages esthétiques et pratiques !",
-        image: "./src/images/im.jpg"
+        title: t('services.lavageVitres.title'),
+        shortDescription: t('services.lavageVitres.description'),
+        longDescription: t('services.lavageVitres.longDescription'),
+        mainImage: "/windowcleaning/windowCleaning.JPG",
+        galleryImages: [
+            "/windowcleaning/windowCleaning2.JPG",
+            "/windowcleaning/windowCleaning3.jpg"
+        ]
     },
     {
         id: 2,
-        title: "NETTOYAGE EXTÉRIEUR",
-        shortDescription: "Nettoyage complet des façades et surfaces extérieures de votre propriété",
-        longDescription: "Le nettoyage extérieur présente de nombreux avantages ! On utilise des produits spéciaux et de l’eau à basse pression pour nettoyer les surfaces extérieures de votre maison, comme les revêtements , les toitures et les moisissures. Les avantages incluent un nettoyage en douceur, une meilleure préservation des matériaux et une élimination efficace des saletés. C'est une excellente option pour garder votre maison propre et en bon état !",
-        image: "./src/images/im.jpg"
+        title: t('services.nettoyageExterieur.title'),
+        shortDescription: t('services.nettoyageExterieur.description'),
+        longDescription: t('services.nettoyageExterieur.longDescription'),
+        mainImage: "/outside/Exteruir.jpg",
+        galleryImages: [
+            "/outside/Exteruir2.jpg",
+            "/outside/Exteruir3.jpg"
+        ]
     },
     {
         id: 3,
-        title: "ENTRETIEN DE GOUTTIÈRES",
-        shortDescription: "Maintenance et nettoyage professionnel de vos systèmes de gouttières",
-        longDescription: "L'entretien des gouttières est important pour plusieurs raisons. Tout d'abord, les gouttières jouent un rôle essentiel dans la gestion des eaux pluviales en les dirigeant loin de votre maison. Lorsque les gouttières sont obstruées par des feuilles, des débris ou des nids d'oiseaux, l'eau peut déborder et causer des dommages aux fondations, aux murs et aux sous-sols de votre maison. En nettoyant régulièrement vos gouttières, vous pouvez prévenir ces problèmes et maintenir l'intégrité de votre maison. De plus, l'entretien des gouttières peut également contribuer à prolonger leur durée de vie en évitant l'accumulation de débris qui pourrait les endommager. Donc, pour protéger votre maison et préserver vos gouttières, il est important de les entretenir régulièrement !",
-        image: "./src/images/im.jpg"
+        title: t('services.entretienGouttieres.title'),
+        shortDescription: t('services.entretienGouttieres.description'),
+        longDescription: t('services.entretienGouttieres.longDescription'),
+        mainImage: "/garout/garoutier.jpg",
+        galleryImages: [
+            "/garout/garoutier2.jpg",
+            "/garout/garoutier3.jpg"
+        ]
     },
     {
         id: 4,
-        title: "LAVAGE À PRESSION",
-        shortDescription: "Service de nettoyage haute pression pour terrasses, allées et façades",
-        longDescription: "Le lavage à pression est une méthode de nettoyage qui utilise de l'eau sous pression pour enlever la saleté, les taches et les dépôts tenaces sur différentes surfaces. On utilise généralement un appareil spécialisé, comme un nettoyeur haute pression, pour projeter un jet d'eau puissant sur la surface à nettoyer. Cela permet d'éliminer efficacement la saleté sans avoir à frotter intensément. C'est une méthode pratique et efficace pour nettoyer les terrasses, le béton, le pavé uni et d'autres surfaces extérieures.",
-        image: "./src/images/im.jpg"
+        title: t('services.lavagePression.title'),
+        shortDescription: t('services.lavagePression.description'),
+        longDescription: t('services.lavagePression.longDescription'),
+        mainImage: "/presurewashing/pressure.jpg",
+        galleryImages: [
+            "/presurewashing/pressure2.jpg",
+            "/presurewashing/pressure3.jpg"
+        ]
     }
     ];
 
-
   return (
-    <section className="services-section">
+    <div className="services-section">
+      {/* Top Blue Strip */}
+      <div className="top-blue-strip">
+        <div className="top-strip-content">
+          <div className="phone-section">
+            <Phone className="phone-icon" size={16} />
+            <span>+1 819-588-5224</span>
+          </div>
+          <div className="center-text">
+            {t('topStrip.tagline')}
+          </div>
+          <div className="social-section">
+            <a href="#" className="social-icon facebook">f</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="services-bf-website-navigation-header-section">
+        <div className="services-bf-website-header-content-wrapper-container">
+          <div className="services-bf-website-company-logo-section">
+            <Link to="/" className="services-bf-website-logo-link">
+              <img 
+                src="/src/images/logo.png" 
+                alt="Les Services BF Logo" 
+                className="services-bf-website-logo-image"
+              />
+            </Link>
+          </div>
+          <nav className="services-bf-website-main-navigation-menu">
+            <Link to="/" className="services-bf-website-nav-menu-link">{t('nav.accueil')}</Link>
+            <Link to="/services" className="services-bf-website-nav-menu-link services-bf-website-nav-link-active-state">{t('nav.services')}</Link>
+            <Link to="/servicesBF" className="services-bf-website-nav-menu-link">{t('nav.aPropos')}</Link>
+            <Link to="/beforeandafter" className="services-bf-website-nav-menu-link">{t('nav.realisations')}</Link>
+            <Link to="/contact" className="services-bf-website-nav-menu-link">{t('nav.contact')}</Link>
+            <Link to="/contact" className="main-submission-button">
+              <span className="button-text">{t('nav.soumission')}</span>
+             
+            </Link>
+          </nav>
+        </div>
+      </header>
+
       <div className="container">
         <div className="services-header">
-          <p className="services-subtitle">/ NOS SERVICES</p>
+          <p className="services-subtitle">{t('services.subtitle')}</p>
           <h2 className="services-title">
-            Valorisez vos extérieurs avec<br />
-            Les Services BF
+            {t('services.title')}
           </h2>
         </div>
 
@@ -57,7 +119,7 @@ const ServicesSection = () => {
               style={{ cursor: 'pointer' }}
             >
               <div className="card-image">
-                <img src={service.image || "/placeholder.svg"} alt={service.title} />
+                <img src={service.mainImage || service.image || "/placeholder.svg"} alt={service.title} />
                 <div className="service-icon">
                 <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.4519 13.4994H22.1182" stroke="white" strokeWidth="2.23804" strokeLinecap="round" strokeLinejoin="round"/>
@@ -78,9 +140,9 @@ const ServicesSection = () => {
       {selectedService && (
         <div className="modal-overlay" onClick={() => setSelectedService(null)}>
           <div className="modal-wrapper" onClick={e => e.stopPropagation()}>
-            <p className="modal-subtitle">/ NOS SERVICES</p>
+            <p className="modal-subtitle">{t('modal.subtitle')}</p>
             <div className="modal-gallery">
-              <img src={selectedService.image} className="large-img" alt="main" />
+              <img src={selectedService.mainImage} className="large-img" alt="main" />
 
               <div
                 className="hide-on-mobile"
@@ -93,16 +155,14 @@ const ServicesSection = () => {
                   alignItems: 'flex-start',  // Optional: align left
                 }}
               >
-                <img
-                  src={selectedService.image}
-                  alt="1"
-                  style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
-                />
-                <img
-                  src={selectedService.image}
-                  alt="2"
-                  style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
-                />
+                {selectedService.galleryImages.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`gallery-${index + 1}`}
+                    style={{ width: '200px', height: '120px', objectFit: 'cover',borderRadius:5 }}
+                  />
+                ))}
               </div>
 
 
@@ -113,13 +173,16 @@ const ServicesSection = () => {
             <p className="modal-description">{selectedService.longDescription}</p>
 
             <div className="modal-actions">
-              <button className="btn-outline" onClick={() => setSelectedService(null)}>Retour</button>
-              <button className="btn-filled">Soumission</button>
+              <button className="btn-outline" onClick={() => setSelectedService(null)}>{t('modal.back')}</button>
+              <button className="btn-filled" onClick={() => {
+                setSelectedService(null);
+                navigate('/contact');
+              }}>{t('modal.submission')}</button>
             </div>
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

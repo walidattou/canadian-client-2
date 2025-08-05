@@ -1,4 +1,5 @@
 import "../css/Footer.css"
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -15,8 +16,8 @@ const Footer = () => {
               </p>
               <div className="social-icons">
         
-                <a href="https://facebook.com" class="facebook-link" target="_blank" rel="noopener noreferrer">
-                  <div class="facebook-icon-bubble">
+                <a href="https://facebook.com" className="facebook-link" target="_blank" rel="noopener noreferrer">
+                  <div className="facebook-icon-bubble">
                     <svg width="16" height="16" viewBox="0 0 320 512" fill="white" xmlns="http://www.w3.org/2000/svg">
                       <path d="M279.14 288l14.22-92.66h-88.91V134.12c0-25.35 
                         12.42-50.06 52.24-50.06H293V6.26S259.5 
@@ -24,19 +25,19 @@ const Footer = () => {
                         124.72v70.62H22.89V288h81.39v224h100.2V288z"/>
                     </svg>
                   </div>
-                  <span class="facebook-label">Les Services BF</span>
+                  <span className="facebook-label">Les Services BF</span>
                 </a>
 
 
 
 
-                <a href="mailto:lesservicesbf@gmail.com" class="email-link" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:lesservicesbf@gmail.com" className="email-link" target="_blank" rel="noopener noreferrer">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="#0086D1" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 
                       20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM20 6L12 11L4 6H20ZM4 
                       18V8L12 13L20 8V18H4Z"/>
                   </svg>
-                  <span class="email-label">lesservicesbf@gmail.com</span>
+                  <span className="email-label">lesservicesbf@gmail.com</span>
                 </a>
 
 
@@ -52,19 +53,19 @@ const Footer = () => {
                 <h3 className="column-title">Navigation</h3>
                 <ul className="footer-links">
                   <li>
-                    <a href="#">Accueil</a>
+                    <Link to="/">Accueil</Link>
                   </li>
                   <li>
-                    <a href="#">A propos</a>
+                    <Link to="/a-propos">À Propos</Link>
                   </li>
                   <li>
-                    <a href="#">Services</a>
+                    <Link to="/services">Services</Link>
                   </li>
                   <li>
-                    <a href="#">Realisations</a>
+                    <Link to="/nos-realisations">Réalisations</Link>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -73,16 +74,16 @@ const Footer = () => {
                 <h3 className="column-title">Services</h3>
                 <ul className="footer-links">
                   <li>
-                    <a href="#">LAVAGE DE VITRES</a>
+                    <Link to="/services">LAVAGE DE VITRES</Link>
                   </li>
                   <li>
-                    <a href="#">ENTRETIEN DE GOUTTIÈRES</a>
+                    <Link to="/services">ENTRETIEN DE GOUTTIÈRES</Link>
                   </li>
                   <li>
-                    <a href="#">NETTOYAGE EXTÉRIEUR</a>
+                    <Link to="/services">NETTOYAGE EXTÉRIEUR</Link>
                   </li>
                   <li>
-                    <a href="#">LAVAGE À PRESSION</a>
+                    <Link to="/services">LAVAGE À PRESSION</Link>
                   </li>
                 </ul>
               </div>

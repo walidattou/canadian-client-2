@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "accueil": "HOME",
+    "services": "SERVICES",
+    "aPropos": "ABOUT",
+    "realisations": "OUR WORK",
+    "contact": "CONTACT",
+    "soumission": "SUBMISSION"
+  },
+  "hero": {
+    "title": "Your experts in exterior building maintenance",
+    "subtitle": "YOUR PROPERTY, OUR PRIORITY!",
+    "cta": "REQUEST A QUOTE"
+  },
+  "topStrip": {
+    "phone": "+1 819-588-5224",
+    "tagline": "YOUR EXPERTS IN EXTERIOR BUILDING MAINTENANCE"
+  },
+  "services": {
+    "title": "Enhance your exteriors with Les Services BF",
+    "subtitle": "/ OUR SERVICES",
+    "viewMore": "View more",
+    "lavageVitres": {
+      "title": "WINDOW CLEANING",
+      "description": "Professional cleaning service for your windows and glass surfaces",
+      "longDescription": "Window cleaning offers several advantages. First, it improves the overall appearance of your home or business by making your windows clean and transparent. It also allows more natural light to enter, creating a brighter and more pleasant atmosphere. Additionally, regular window cleaning can extend their lifespan by removing dirt, dust, and contaminants that could damage them. Finally, it can also help maintain the quality of thermal insulation of your windows. So, in summary, window cleaning offers both aesthetic and practical benefits!"
+    },
+    "nettoyageExterieur": {
+      "title": "EXTERIOR CLEANING",
+      "description": "Complete cleaning of facades and exterior surfaces of your property",
+      "longDescription": "Exterior cleaning offers many advantages! We use special products and low-pressure water to clean the exterior surfaces of your home, such as siding, roofing, and mold. The benefits include gentle cleaning, better material preservation, and effective dirt removal. It's an excellent option to keep your home clean and in good condition!"
+    },
+    "entretienGouttieres": {
+      "title": "GUTTER MAINTENANCE",
+      "description": "Professional maintenance and cleaning of your gutter systems",
+      "longDescription": "Gutter maintenance is important for several reasons. First, gutters play an essential role in managing rainwater by directing it away from your home. When gutters are clogged with leaves, debris, or bird nests, water can overflow and cause damage to foundations, walls, and basements. By regularly cleaning your gutters, you can prevent these problems and maintain the integrity of your home. Additionally, gutter maintenance can also help extend their lifespan by avoiding debris accumulation that could damage them. So, to protect your home and preserve your gutters, it's important to maintain them regularly!"
+    },
+    "lavagePression": {
+      "title": "PRESSURE WASHING",
+      "description": "High-pressure cleaning service for patios, driveways, and facades",
+      "longDescription": "Pressure washing is a cleaning method that uses pressurized water to remove dirt, stains, and stubborn deposits from various surfaces. We typically use specialized equipment, such as a pressure washer, to project a powerful jet of water onto the surface to be cleaned. This allows for effective dirt removal without intensive scrubbing. It's a practical and efficient method for cleaning patios, concrete, interlocking pavers, and other exterior surfaces."
+    }
+  },
+  "propertyTypes": {
+    "title": "RESIDENTIAL - RENTAL BUILDINGS - COMMERCIAL"
+  },
+  "testimonials": {
+    "title": "Google reviews from our clients",
+    "subtitle": "/ TESTIMONIALS"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "today",
+    "description": "Get a free quote for your exterior building maintenance services.",
+    "phone": {
+      "title": "Phone",
+      "number": "+1 819-588-5224",
+      "hours": "Mon - Fri, 8:00 AM - 5:00 PM"
+    },
+    "email": {
+      "title": "Email",
+      "address": "lesservicesbf@gmail.com",
+      "response": "Response within 24h"
+    },
+    "location": {
+      "title": "Service area",
+      "area": "Estrie and Central Quebec",
+      "info": "Free travel"
+    },
+    "form": {
+      "title": "Quote request",
+      "subtitle": "Fill out the form and we'll contact you quickly",
+      "personalInfo": "Personal information",
+      "projectAddress": "Project address",
+      "requiredServices": "Required services",
+      "requestType": "Request type",
+      "submit": "Send my request",
+      "guarantee": "Guaranteed response within 24h • Free quote • No commitment"
+    }
+  },
+  "about": {
+    "title": "Les Services BF – Your trusted partner in exterior building maintenance",
+    "description": "For several years, our team has been offering professional and uncompromising exterior maintenance service. Result: satisfied clients, impeccable buildings, and a reputation built on excellence throughout Estrie and Central Quebec.",
+    "approach": {
+      "title": "OUR APPROACH",
+      "description": "At Les Services BF, we know how important it is for you to entrust your building maintenance to a trusted team. That's why we take the time to listen to your needs and offer you a personalized, attentive, and respectful service for your property. Our passionate team intervenes with care and professionalism, choosing the best methods to preserve the beauty and longevity of your property. Throughout our collaboration, we remain available and ready to support you, with transparency and responsiveness to guarantee you a reliable service perfectly adapted to your expectations."
+    },
+    "values": {
+      "title": "OUR VALUES IN YOUR PROJECTS",
+      "excellence": {
+        "title": "EXCELLENCE",
+        "description": "We are committed to providing impeccable service, combining technical expertise and attention to detail, for results that always meet your expectations."
+      },
+      "fiabilite": {
+        "title": "RELIABILITY",
+        "description": "Our clients' trust is essential. We respect our commitments, intervene punctually, and ensure constant follow-up for your complete peace of mind."
+      },
+      "proximite": {
+        "title": "PROXIMITY",
+        "description": "Attentive and available, we build a lasting partnership relationship with each of our clients, adapting our services to their specific needs."
+      }
+    }
+  },
+  "footer": {
+    "description": "Les Services BF is a company specialized in exterior maintenance of residential and commercial buildings. We offer a complete range of services. Our goal is to help you maintain your property clean and in good condition throughout the year!",
+    "navigation": {
+      "title": "Navigation",
+      "accueil": "Home",
+      "aPropos": "About",
+      "services": "Services",
+      "realisations": "Our Work",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "lavageVitres": "WINDOW CLEANING",
+      "entretienGouttieres": "GUTTER MAINTENANCE",
+      "nettoyageExterieur": "EXTERIOR CLEANING",
+      "lavagePression": "PRESSURE WASHING"
+    }
+  },
+  "modal": {
+    "subtitle": "/ OUR SERVICES",
+    "back": "Back",
+    "submission": "Submission"
+  },
+  "form": {
+    "fields": {
+      "nom": "Last name",
+      "prenom": "First name",
+      "email": "Email address",
+      "telephone": "Phone (ex: +1 819-588-5224)",
+      "adresse": "Complete address",
+      "ville": "City",
+      "codePostal": "Postal code",
+      "province": "Province",
+      "servicesAdditionnels": "Additional services",
+      "typeDemande": "Select request type",
+      "soumission": "Request a quote",
+      "devis": "Request an estimate",
+      "information": "Request information",
+      "urgence": "Emergency service"
+    }
+  }
+} 

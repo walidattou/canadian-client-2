@@ -5,12 +5,18 @@ import { Link, useLocation } from 'react-router-dom';
 const NavBar = () => {
   const location = useLocation();
 
+  const isActive = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+
   return (
     <div>
       {/* Header Bar */}
       <div className="header-bar">
         <div className="contact-info">
-
           <div className="hours">
             {/* Custom Clock SVG */}
             <span className="clock-icon">
@@ -41,11 +47,55 @@ const NavBar = () => {
       {/* Navigation */}
       <nav className="navigation">
         <ul>
-          <li><Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Accueil</Link></li>
-          <li><Link to="/services" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`}>Services</Link></li>
-          <li><Link to="/servicesBF" className={`nav-link ${location.pathname === '/servicesBF' ? 'active' : ''}`}>A Propos</Link></li>
-          <li><Link to="/beforeandafter" className={`nav-link ${location.pathname === '/beforeandafter' ? 'active' : ''}`}>Realisation</Link></li>
-          <li><Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link></li>
+          <li>
+            <Link 
+              to="/" 
+              className={`nav-link ${isActive('/') ? 'active' : ''}`}
+            >
+              Accueil
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/services" 
+              className={`nav-link ${isActive('/services') ? 'active' : ''}`}
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/servicesBF" 
+              className={`nav-link ${isActive('/servicesBF') ? 'active' : ''}`}
+            >
+              À Propos
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/beforeandafter" 
+              className={`nav-link ${isActive('/beforeandafter') ? 'active' : ''}`}
+            >
+              Réalisations
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/contact" 
+              className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+            >
+              Contact
+            </Link>
+          </li>
+          <li className="submission-button-container">
+            <Link 
+              to="/contact" 
+              className="submission-button"
+            >
+              <span className="button-text">DEMANDER UN DEVIS</span>
+              <span className="button-icon">→</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
