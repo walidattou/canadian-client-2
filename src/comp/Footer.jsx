@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-left">
             <div className="company-info">
-              <img src="./src/images/logo.png" alt="Les Services BF Logo" className="footer-logo" />
+              <img src="/images/logo.png" alt="Les Services BF Logo" className="footer-logo" />
               <p className="company-description">
                 Les Services BF est une entreprise spécialisée dans l'entretien extérieur d'immeuble résidentiel et
                 commercial. Nous offrons une gamme complète de services. Notre objectif est de vous aider à maintenir

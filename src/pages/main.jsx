@@ -96,7 +96,7 @@ export default function MainPage() {
           <div className="services-bf-website-company-logo-section">
             <Link to="/" className="services-bf-website-logo-link">
               <img 
-                src="/src/images/logo.png" 
+                src="/images/logo.png" 
                 alt="Les Services BF Logo" 
                 className="services-bf-website-logo-image"
               />
@@ -124,7 +124,7 @@ export default function MainPage() {
           muted
           playsInline
         >
-          <source src="/src/BG_video/Bghero.mp4" type="video/mp4" />
+          <source src="/BG_video/Bghero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

@@ -82,7 +82,7 @@ const ServicesSection = () => {
           <div className="services-bf-website-company-logo-section">
             <Link to="/" className="services-bf-website-logo-link">
               <img 
-                src="/src/images/logo.png" 
+                src="/images/logo.png" 
                 alt="Les Services BF Logo" 
                 className="services-bf-website-logo-image"
               />
