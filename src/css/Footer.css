@@ -209,6 +209,40 @@
   font-size: 12px;
 }
 
+/* Tablet Responsiveness */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .facebook-link {
+    font-size: 15px;
+  }
+
+  .facebook-label {
+    font-size: 15px;
+  }
+
+  .email-link {
+    font-size: 15px;
+  }
+
+  .email-label {
+    font-size: 15px;
+  }
+
+  .facebook-icon-bubble {
+    width: 30px;
+    height: 30px;
+  }
+
+  .facebook-icon-bubble svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .email-link svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .footer {
@@ -248,6 +282,39 @@
 
   .social-icons {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .facebook-link {
+    font-size: 14px;
+  }
+
+  .facebook-label {
+    font-size: 14px;
+  }
+
+  .email-link {
+    font-size: 14px;
+  }
+
+  .email-label {
+    font-size: 14px;
+  }
+
+  .facebook-icon-bubble {
+    width: 28px;
+    height: 28px;
+  }
+
+  .facebook-icon-bubble svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .email-link svg {
+    width: 20px;
+    height: 20px;
   }
 
   .footer-columns {
@@ -313,6 +380,37 @@
   .footer-links a {
     font-size: 13px;
   }
+
+  .facebook-link {
+    font-size: 13px;
+  }
+
+  .facebook-label {
+    font-size: 13px;
+  }
+
+  .email-link {
+    font-size: 13px;
+  }
+
+  .email-label {
+    font-size: 13px;
+  }
+
+  .facebook-icon-bubble {
+    width: 26px;
+    height: 26px;
+  }
+
+  .facebook-icon-bubble svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .email-link svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* Extra Small Devices (under 400px) */
@@ -332,6 +430,37 @@
 
   .social-icons {
     gap: 10px;
+  }
+
+  .facebook-link {
+    font-size: 12px;
+  }
+
+  .facebook-label {
+    font-size: 12px;
+  }
+
+  .email-link {
+    font-size: 12px;
+  }
+
+  .email-label {
+    font-size: 12px;
+  }
+
+  .facebook-icon-bubble {
+    width: 24px;
+    height: 24px;
+  }
+
+  .facebook-icon-bubble svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .email-link svg {
+    width: 16px;
+    height: 16px;
   }
 
   .footer-bottom {

@@ -135,7 +135,7 @@ const BeforeAfterCarousel = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const slides = [
-    { id: 1, beforeImage: "/beforeafter/im1before.JPG", afterImage: "/beforeafter/im1after.JPG" },
+    { id: 1, beforeImage: "/beforeafter/im1after.JPG", afterImage: "/beforeafter/im1before.JPG" },
     { id: 2, beforeImage: "/beforeafter/im2before.JPG", afterImage: "/beforeafter/im2after.JPG" },
     { id: 3, beforeImage: "/beforeafter/im3before.jpg", afterImage: "/beforeafter/im3after.jpg" },
     { id: 4, beforeImage: "/beforeafter/im4before.JPG", afterImage: "/beforeafter/im4after.JPG" },

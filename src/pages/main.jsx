@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import "../css/main.css";
@@ -221,15 +221,75 @@ export default function MainPage() {
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
               }}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               navigation={{
                 nextEl: '.right-arrow',
                 prevEl: '.left-arrow',
               }}
+              autoplay={false}
+              allowTouchMove={true}
+              touchRatio={0.8}
+              resistance={true}
+              resistanceRatio={0.85}
+              touchStartPreventDefault={false}
+              shortSwipes={true}
+              longSwipes={true}
+              longSwipesRatio={0.5}
+              longSwipesMs={300}
+              followFinger={true}
               breakpoints={{
-                640: { slidesPerView: 1, spaceBetween: 20 },
-                768: { slidesPerView: 2, spaceBetween: 30 },
-                1024: { slidesPerView: 3, spaceBetween: 30 },
+                640: { 
+                  slidesPerView: 1, 
+                  spaceBetween: 20,
+                  centeredSlides: true,
+                  loop: true,
+                  autoplay: false,
+                  allowTouchMove: true,
+                  touchRatio: 0.3,
+                  resistance: true,
+                  resistanceRatio: 0.5,
+                  shortSwipes: false,
+                  longSwipes: true,
+                  longSwipesRatio: 0.8,
+                  longSwipesMs: 800,
+                  followFinger: false,
+                  touchStartPreventDefault: true,
+                  touchMoveStopPropagation: true
+                },
+                768: { 
+                  slidesPerView: 2, 
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  loop: true,
+                  autoplay: false,
+                  allowTouchMove: true,
+                  touchRatio: 0.3,
+                  resistance: true,
+                  resistanceRatio: 0.5,
+                  shortSwipes: false,
+                  longSwipes: true,
+                  longSwipesRatio: 0.8,
+                  longSwipesMs: 800,
+                  followFinger: false,
+                  touchStartPreventDefault: true,
+                  touchMoveStopPropagation: true
+                },
+                1024: { 
+                  slidesPerView: 3, 
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  loop: true,
+                  autoplay: false,
+                  allowTouchMove: true,
+                  touchRatio: 0.8,
+                  resistance: true,
+                  resistanceRatio: 0.85,
+                  shortSwipes: true,
+                  longSwipes: true,
+                  longSwipesRatio: 0.5,
+                  longSwipesMs: 300,
+                  followFinger: true
+                },
               }}
             >
               {googleReviews.map((review, index) => (
