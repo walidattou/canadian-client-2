@@ -191,7 +191,7 @@ export default function MainPage() {
 
 
           <div className="services-grid">
-            {services.map((service) => (
+            {services.slice(0, 2).map((service) => (
               <div
                 key={service.id}
                 className="service-card"
