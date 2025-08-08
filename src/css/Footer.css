@@ -110,10 +110,10 @@
 }
 
 .footer-logo {
-  height: 65px;
+  height: 70px;
   width: auto;
   object-fit: contain;
-  max-width: 100px;
+  max-width: 180px;
   display: block;
   margin-bottom: 20px;
   transition: all 0.3s ease;
@@ -346,9 +346,9 @@
   }
 
   .footer-logo {
-    height: 55px;
+    height: 60px;
     width: auto;
-    max-width: 90px;
+    max-width: 150px;
     margin: 0 auto 20px;
   }
 }
@@ -356,9 +356,9 @@
 /* Small Mobile Devices (under 650px) */
 @media (max-width: 650px) {
   .footer-logo {
-    height: 50px;
+    height: 55px;
     width: auto;
-    max-width: 80px;
+    max-width: 130px;
     margin: 0 auto 20px;
   }
 
@@ -416,9 +416,9 @@
 /* Extra Small Devices (under 400px) */
 @media (max-width: 400px) {
   .footer-logo {
-    height: 45px;
+    height: 50px;
     width: auto;
-    max-width: 70px;
+    max-width: 110px;
     margin: 0 auto 20px;
   }
 

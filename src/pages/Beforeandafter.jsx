@@ -142,6 +142,10 @@ const BeforeAfterCarousel = () => {
     { id: 5, beforeImage: "/beforeafter/im5before.JPG", afterImage: "/beforeafter/im5after.JPG" },
     { id: 6, beforeImage: "/beforeafter/im6before.jpg", afterImage: "/beforeafter/im6after.jpg" },
     { id: 7, beforeImage: "/beforeafter/im7before.JPG", afterImage: "/beforeafter/im7after.JPG" },
+    { id: 8, beforeImage: "/beforeafter/gutter01.jpg", afterImage: "/beforeafter/gutter02.jpg" },
+    { id: 9, beforeImage: "/beforeafter/imvitrebeffor.JPG", afterImage: "/beforeafter/imvitreaftter.jpg" },
+    { id: 10, beforeImage: "/beforeafter/imvitrebeffor2.JPG", afterImage: "/beforeafter/imvitreaffter2.JPG" },
+    { id: 11, beforeImage: "/beforeafter/window1.png", afterImage: "/beforeafter/window2.png" },
   ];
 
   // Check if mobile on mount and resize
@@ -175,7 +179,7 @@ const BeforeAfterCarousel = () => {
             VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES
           </div>
           <div className="social-section">
-            <a href="#" className="social-icon facebook">f</a>
+            <a href="https://www.facebook.com/people/Les-Services-BF/100084751583004/?locale=fr_CA" className="social-icon facebook" target="_blank" rel="noopener noreferrer">f</a>
           </div>
         </div>
       </div>

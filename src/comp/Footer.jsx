@@ -16,7 +16,7 @@ const Footer = () => {
               </p>
               <div className="social-icons">
         
-                <a href="https://facebook.com" className="facebook-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/people/Les-Services-BF/100084751583004/?locale=fr_CA" className="facebook-link" target="_blank" rel="noopener noreferrer">
                   <div className="facebook-icon-bubble">
                     <svg width="16" height="16" viewBox="0 0 320 512" fill="white" xmlns="http://www.w3.org/2000/svg">
                       <path d="M279.14 288l14.22-92.66h-88.91V134.12c0-25.35 

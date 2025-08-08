@@ -19,28 +19,28 @@ export default function MainPage() {
 
   const googleReviews = [
     {
-      name: "Sophie Poirier",
-      review: "Service très courtois et travail minutieux. Je recommande sans aucune hésitation."
+      name: "Rafaël Lamontagne",
+      review: "Très satisfait du service ! L'équipe est ponctuelle et professionnelle. Mes vitres n'ont jamais été aussi propres. Je recommande sans hésiter!"
     },
     {
-      name: "Maryse St-Amant",
-      review: "William est venu faire le lavage des vitres extérieures chez-moi, le 23 mai 2024, je suis très satisfaite du travail accompli. Ils utilisent une nouvelle technologie, il brosse la vitre plusieurs fois. A1 dans tout!"
+      name: "Karolane Voyer Roy",
+      review: "Service très efficace et excellent lavage de mes fenêtres. Elles sont super claires et propres. Équipe très professionnelle. Je les recommande fortement !"
     },
     {
-      name: "Eugénie Lemire-Théberge",
-      review: "Tout c'est bien déroulé, je recommande sans appelle à eux annuellement c'est certain!"
+      name: "Marianne Dupont",
+      review: "Excellent service du début à la fin. Nathan et son équipe ont lavé mes vitres et nettoyé mes gouttières, tout est impeccable. Je vais définitivement refaire affaire avec eux!"
     },
     {
-      name: "Jérôme Morelle",
-      review: "Très satisfait du service de nettoyage. L'équipe est professionnelle et le résultat impeccable."
+      name: "R.n.powell",
+      review: "Super happy with the service! My windows are crystal clear, and the balcony looks completely refreshed. Very professional team!"
     },
     {
-      name: "Sylvain Lemaire",
-      review: "Service excellent, ponctuel et soigné. Je recommande vivement Les Services BF."
+      name: "Fortuna Gebrewet",
+      review: "They did an incredible job, my concrete patio looks like new, and the windows haven't been this clean in years. Very professional team!"
     },
     {
-      name: "Mélanie Morelle",
-      review: "Travail de qualité et équipe très professionnelle. Nos vitres n'ont jamais été aussi propres!"
+      name: "Charlotte Morin",
+      review: "Service impeccable ! Nettoyage des fenêtres et du balcon très bien fait. Professionnels et respectueux. Je recommande sans hésiter !"
     }
   ];
 
@@ -52,10 +52,10 @@ export default function MainPage() {
         title: "LAVAGE DE VITRES",
         shortDescription: "Service de nettoyage professionnel pour vos vitres et surfaces vitrées",
         longDescription: "Le lavage de vitres présente plusieurs avantages. Tout d'abord, cela améliore l'apparence générale de votre maison ou de votre entreprise en rendant vos fenêtres propres et transparentes. Cela permet également à plus de lumière naturelle de pénétrer à l'intérieur, ce qui crée une atmosphère plus lumineuse et agréable. De plus, le lavage régulier des fenêtres peut prolonger leur durée de vie en éliminant la saleté, la poussière et les contaminants qui pourraient les endommager. Enfin, cela peut également contribuer à maintenir la qualité de l'isolation thermique de vos fenêtres. Donc, en résumé, le lavage de vitres offre à la fois des avantages esthétiques et pratiques !",
-        mainImage: "/windowcleaning/windowCleaning.JPG",
+        mainImage: "/images/vitre1.jpg",
         galleryImages: [
-            "/windowcleaning/windowCleaning2.JPG",
-            "/windowcleaning/windowCleaning3.jpg"
+            "/images/vitre2.jpg",
+            "/images/vitre3.jpg"
         ]
     },
     {
@@ -69,7 +69,28 @@ export default function MainPage() {
             "/outside/Exteruir3.jpg"
         ]
     },
-
+    {
+        id: 3,
+        title: "ENTRETIEN DE GOUTTIÈRES",
+        shortDescription: "Nettoyage et entretien professionnel de vos gouttières",
+        longDescription: "L'entretien des gouttières est essentiel pour protéger votre propriété. Nos services incluent le nettoyage complet des gouttières, l'élimination des débris et la vérification du bon fonctionnement du système de drainage. Cela prévient les dommages causés par l'eau et maintient l'intégrité de votre toiture.",
+        mainImage: "/garout/garoutier.jpg",
+        galleryImages: [
+            "/beforeafter/gutter01.jpg",
+            "/beforeafter/gutter02.jpg"
+        ]
+    },
+    {
+        id: 4,
+        title: "LAVAGE À PRESSION",
+        shortDescription: "Service de nettoyage à pression pour toutes vos surfaces extérieures",
+        longDescription: "Le lavage à pression est une méthode efficace pour nettoyer en profondeur les surfaces extérieures. Nous utilisons de l'eau à haute pression pour éliminer la saleté, les taches et les moisissures de vos allées, terrasses, murs et autres surfaces extérieures.",
+        mainImage: "/beforeafter/pression01.jpg",
+        galleryImages: [
+            "/beforeafter/pression02.jpg",
+            "/presurewashing/pressure3.jpg"
+        ]
+    }
   ];
 
   return (
@@ -85,7 +106,7 @@ export default function MainPage() {
             {t('topStrip.tagline')}
           </div>
           <div className="social-section">
-            <a href="#" className="social-icon facebook">f</a>
+            <a href="https://www.facebook.com/people/Les-Services-BF/100084751583004/?locale=fr_CA" className="social-icon facebook" target="_blank" rel="noopener noreferrer">f</a>
           </div>
         </div>
       </div>

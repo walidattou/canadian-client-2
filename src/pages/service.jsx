@@ -17,10 +17,10 @@ const ServicesSection = () => {
         title: t('services.lavageVitres.title'),
         shortDescription: t('services.lavageVitres.description'),
         longDescription: t('services.lavageVitres.longDescription'),
-        mainImage: "/windowcleaning/windowCleaning.JPG",
+        mainImage: "/images/vitre1.jpg",
         galleryImages: [
-            "/windowcleaning/windowCleaning2.JPG",
-            "/windowcleaning/windowCleaning3.jpg"
+            "/images/vitre2.jpg",
+            "/images/vitre3.jpg"
         ]
     },
     {
@@ -41,8 +41,8 @@ const ServicesSection = () => {
         longDescription: t('services.entretienGouttieres.longDescription'),
         mainImage: "/garout/garoutier.jpg",
         galleryImages: [
-            "/garout/garoutier2.jpg",
-            "/garout/garoutier3.jpg"
+            "/beforeafter/gutter01.jpg",
+            "/beforeafter/gutter02.jpg"
         ]
     },
     {
@@ -50,9 +50,9 @@ const ServicesSection = () => {
         title: t('services.lavagePression.title'),
         shortDescription: t('services.lavagePression.description'),
         longDescription: t('services.lavagePression.longDescription'),
-        mainImage: "/presurewashing/pressure.jpg",
+        mainImage: "/beforeafter/pression01.jpg",
         galleryImages: [
-            "/presurewashing/pressure2.jpg",
+            "/beforeafter/pression02.jpg",
             "/presurewashing/pressure3.jpg"
         ]
     }
@@ -71,7 +71,7 @@ const ServicesSection = () => {
             {t('topStrip.tagline')}
           </div>
           <div className="social-section">
-            <a href="#" className="social-icon facebook">f</a>
+            <a href="https://www.facebook.com/people/Les-Services-BF/100084751583004/?locale=fr_CA" className="social-icon facebook" target="_blank" rel="noopener noreferrer">f</a>
           </div>
         </div>
       </div>

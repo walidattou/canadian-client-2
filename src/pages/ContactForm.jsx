@@ -45,7 +45,7 @@ const ContactForm = () => {
             VOS EXPERTS EN ENTRETIENS EXTÉRIEURS D'IMMEUBLES
           </div>
           <div className="social-section">
-            <a href="#" className="social-icon facebook">f</a>
+            <a href="https://www.facebook.com/people/Les-Services-BF/100084751583004/?locale=fr_CA" className="social-icon facebook" target="_blank" rel="noopener noreferrer">f</a>
           </div>
         </div>
       </div>
