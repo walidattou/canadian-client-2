@@ -1048,20 +1048,21 @@ body {
   }
 
   .testimonials-swiper {
-    padding: 0 10px;
+    padding: 0;
     touch-action: pan-x;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
   }
 
   .testimonial-card {
     height: auto;
     min-height: 280px;
     padding: 25px 20px;
-    margin: 0 5px;
+    margin: 0 50px;
     touch-action: none;
     user-select: none;
     -webkit-user-select: none;
@@ -1069,6 +1070,10 @@ body {
     -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
     pointer-events: none;
+    width: calc(100% - 100px);
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .testimonial-card * {
@@ -1111,7 +1116,17 @@ body {
 
 @media (max-width: 480px) {
   .testimonials-content {
-    padding: 40px 10px;
+    padding: 40px 15px;
+  }
+  
+  .testimonials-swiper {
+    padding: 0;
+  }
+  
+  .testimonial-card {
+    width: calc(100% - 100px);
+    max-width: 300px;
+    margin: 0 50px;
   }
   
   .testimonials-header {

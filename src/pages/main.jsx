@@ -259,23 +259,41 @@ export default function MainPage() {
               longSwipesMs={300}
               followFinger={true}
               breakpoints={{
-                640: { 
+                320: { 
                   slidesPerView: 1, 
-                  spaceBetween: 20,
+                  spaceBetween: 0,
                   centeredSlides: true,
                   loop: true,
                   autoplay: false,
                   allowTouchMove: true,
-                  touchRatio: 0.3,
+                  touchRatio: 0.5,
                   resistance: true,
-                  resistanceRatio: 0.5,
-                  shortSwipes: false,
+                  resistanceRatio: 0.7,
+                  shortSwipes: true,
                   longSwipes: true,
-                  longSwipesRatio: 0.8,
-                  longSwipesMs: 800,
-                  followFinger: false,
-                  touchStartPreventDefault: true,
-                  touchMoveStopPropagation: true
+                  longSwipesRatio: 0.6,
+                  longSwipesMs: 600,
+                  followFinger: true,
+                  touchStartPreventDefault: false,
+                  touchMoveStopPropagation: false
+                },
+                640: { 
+                  slidesPerView: 1, 
+                  spaceBetween: 0,
+                  centeredSlides: true,
+                  loop: true,
+                  autoplay: false,
+                  allowTouchMove: true,
+                  touchRatio: 0.5,
+                  resistance: true,
+                  resistanceRatio: 0.7,
+                  shortSwipes: true,
+                  longSwipes: true,
+                  longSwipesRatio: 0.6,
+                  longSwipesMs: 600,
+                  followFinger: true,
+                  touchStartPreventDefault: false,
+                  touchMoveStopPropagation: false
                 },
                 768: { 
                   slidesPerView: 2, 
