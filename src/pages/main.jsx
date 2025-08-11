@@ -63,10 +63,10 @@ export default function MainPage() {
         title: "NETTOYAGE EXTÉRIEUR",
         shortDescription: "Nettoyage complet des façades et surfaces extérieures de votre propriété",
         longDescription: "Le nettoyage extérieur présente de nombreux avantages ! On utilise des produits spéciaux et de l'eau à basse pression pour nettoyer les surfaces extérieures de votre maison, comme les revêtements , les toitures et les moisissures. Les avantages incluent un nettoyage en douceur, une meilleure préservation des matériaux et une élimination efficace des saletés. C'est une excellente option pour garder votre maison propre et en bon état !",
-        mainImage: "/outside/Exteruir.jpg",
+        mainImage: "/beforeafter/im4after.JPG",
         galleryImages: [
-            "/outside/Exteruir2.jpg",
-            "/outside/Exteruir3.jpg"
+            "/beforeafter/im4before.JPG",
+            "/beforeafter/im1before.JPG"
         ]
     },
     {

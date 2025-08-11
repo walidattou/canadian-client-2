@@ -77,7 +77,7 @@ export default function ServicesBF() {
                 {/* Two small images */}
                 <div className="small-images">
                   <div className="image-placeholder small">
-                    <img src="/windowcleaning/windowCleaning.JPG" alt="Professional window cleaning service" />
+                    <img src="/beforeafter/outside.jpg" alt="Professional window cleaning service" />
                   </div>
                   <div className="image-placeholder small">
                     <img src="/outside/Exteruir.jpg" alt="Professional exterior cleaning service" />

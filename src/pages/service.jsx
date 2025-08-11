@@ -28,10 +28,10 @@ const ServicesSection = () => {
         title: t('services.nettoyageExterieur.title'),
         shortDescription: t('services.nettoyageExterieur.description'),
         longDescription: t('services.nettoyageExterieur.longDescription'),
-        mainImage: "/outside/Exteruir.jpg",
+        mainImage: "/beforeafter/im4after.JPG",
         galleryImages: [
-            "/outside/Exteruir2.jpg",
-            "/outside/Exteruir3.jpg"
+            "/beforeafter/im4before.JPG",
+            "/beforeafter/im1before.JPG"
         ]
     },
     {

@@ -338,11 +338,23 @@ const DesktopCarousel = ({ slides }) => {
   };
 
   const goToNext = () => {
-    setCurrentIndex(prev => Math.min(slides.length - 3, prev + 1));
+    setCurrentIndex(prev => Math.min(slides.length - 1, prev + 1));
   };
 
   const getVisibleSlides = () => {
-    return slides.slice(currentIndex, currentIndex + 3);
+    // Handle edge cases for first and last slides
+    if (currentIndex === 0) {
+      // At the beginning, show first 3 slides
+      return slides.slice(0, 3);
+    } else if (currentIndex === slides.length - 1) {
+      // At the end, show last 3 slides
+      return slides.slice(Math.max(0, slides.length - 3), slides.length);
+    } else {
+      // In the middle, show 3 slides centered around currentIndex
+      const startIndex = Math.max(0, currentIndex - 1);
+      const endIndex = Math.min(slides.length, startIndex + 3);
+      return slides.slice(startIndex, endIndex);
+    }
   };
 
   return (
@@ -359,25 +371,41 @@ const DesktopCarousel = ({ slides }) => {
         </button>
 
         {/* Slider Cards Container */}
-        <div className="slider-cards-container">
-          {getVisibleSlides().map((slide, index) => (
-            <div 
-              key={`slide-${slide.id}`}
-              className={`slider-card ${index === 1 ? 'active-card' : 'inactive-card'}`}
-            >
-              <BeforeAfterSlider
-                beforeImage={slide.beforeImage}
-                afterImage={slide.afterImage}
-                label={`Comparison ${slide.id}`}
-              />
-            </div>
-          ))}
+        <div className={`slider-cards-container ${getVisibleSlides().length < 3 ? 'fewer-slides' : ''}`}>
+          {getVisibleSlides().map((slide, index) => {
+            // Determine if this should be the active card based on currentIndex
+            let isActive = false;
+            
+            if (currentIndex === 0) {
+              // At the beginning, first slide is active
+              isActive = index === 0;
+            } else if (currentIndex === slides.length - 1) {
+              // At the end, last slide is active
+              isActive = index === getVisibleSlides().length - 1;
+            } else {
+              // In the middle, middle slide is active
+              isActive = index === 1;
+            }
+            
+            return (
+              <div 
+                key={`slide-${slide.id}`}
+                className={`slider-card ${isActive ? 'active-card' : 'inactive-card'}`}
+              >
+                <BeforeAfterSlider
+                  beforeImage={slide.beforeImage}
+                  afterImage={slide.afterImage}
+                  label={`Comparison ${slide.id}`}
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Right Arrow */}
         <button 
           onClick={goToNext} 
-          disabled={currentIndex >= slides.length - 3}
+          disabled={currentIndex >= slides.length - 1}
           className="nav-button nav-button-right"
         >
           <ChevronRight size={24} className="nav-icon" />
@@ -395,17 +423,33 @@ const DesktopCarousel = ({ slides }) => {
         </button>
         
         <div className="dots-container">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${index >= currentIndex && index < currentIndex + 3 ? 'active-dot' : 'inactive-dot'}`}
-            />
-          ))}
+          {slides.map((_, index) => {
+            const visibleSlides = getVisibleSlides();
+            let isVisible = false;
+            
+            if (currentIndex === 0) {
+              // At the beginning, show first 3 dots
+              isVisible = index < 3;
+            } else if (currentIndex === slides.length - 1) {
+              // At the end, show last 3 dots
+              isVisible = index >= slides.length - 3;
+            } else {
+              // In the middle, show 3 dots around currentIndex
+              isVisible = index >= currentIndex - 1 && index <= currentIndex + 1;
+            }
+            
+            return (
+              <div
+                key={index}
+                className={`dot ${isVisible ? 'active-dot' : 'inactive-dot'}`}
+              />
+            );
+          })}
         </div>
         
         <button 
           onClick={goToNext} 
-          disabled={currentIndex >= slides.length - 3}
+          disabled={currentIndex >= slides.length - 1}
           className="bottom-nav-button"
         >
           <ChevronRight size={20} />

@@ -141,11 +141,11 @@ body {
 }
 
 .services-bf-website-logo-image {
-  height: 70px;
+  height: 105px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
-  max-width: 180px;
+  max-width: 270px;
 }
 
 .services-bf-website-logo-link:hover .services-bf-website-logo-image {
@@ -245,7 +245,7 @@ body {
 }
 
 .services-bf-website-hero-main-title-heading {
-  font-size: 70px;
+  font-size: 35px;
   font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   line-height: 1.2;
