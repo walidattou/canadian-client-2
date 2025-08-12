@@ -93,7 +93,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <p className="copyright">Copyright © 2023 Lemonade | Design by TechTema</p>
+            <p className="copyright">Copyright © 2025 Les Services BF | Developed by <a href="https://www.sohixe.com/" target="_blank" rel="noopener noreferrer" className="sohixe-link">Sohixe</a></p>
           </div>
           <div className="footer-bottom-right">
             <a href="#" className="footer-bottom-link">

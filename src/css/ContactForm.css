@@ -291,6 +291,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background-color: #f9fafb;
+  cursor: text !important;
 }
 
 .form-input:focus,
@@ -308,6 +309,26 @@
 .form-select {
   appearance: none;
   cursor: pointer;
+}
+
+.form-input {
+  cursor: text !important;
+  caret-color: #1f2937;
+}
+
+.form-input:hover,
+.form-input:focus {
+  cursor: text !important;
+  caret-color: #1f2937;
+}
+
+/* Ensure cursor is always visible */
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus::placeholder {
+  color: #6b7280;
 }
 
 .select-group {
