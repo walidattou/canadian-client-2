@@ -28,9 +28,9 @@ const ServicesSection = () => {
         title: t('services.nettoyageExterieur.title'),
         shortDescription: t('services.nettoyageExterieur.description'),
         longDescription: t('services.nettoyageExterieur.longDescription'),
-        mainImage: "/beforeafter/im4after.JPG",
+        mainImage: "/beforeafter/im4before.JPG",
         galleryImages: [
-            "/beforeafter/im4before.JPG",
+            "/beforeafter/im4after.JPG",
             "/beforeafter/im1before.JPG"
         ]
     },
@@ -39,9 +39,9 @@ const ServicesSection = () => {
         title: t('services.entretienGouttieres.title'),
         shortDescription: t('services.entretienGouttieres.description'),
         longDescription: t('services.entretienGouttieres.longDescription'),
-        mainImage: "/garout/garoutier.jpg",
+        mainImage: "/beforeafter/gutter01.jpg",
         galleryImages: [
-            "/beforeafter/gutter01.jpg",
+            "/garout/garoutier.jpg",
             "/beforeafter/gutter02.jpg"
         ]
     },

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, ChevronDown, Send, User, Building, Wrench, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { sendEmail } from '../sendEmail';
 import "../css/ContactForm.css";
 import "../css/main.css";
 
@@ -18,6 +19,9 @@ const ContactForm = () => {
     servicesChoisis: ''
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -26,10 +30,37 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Formulaire soumis avec succès!');
+    setIsLoading(true);
+
+    try {
+      const result = await sendEmail(formData);
+      
+      if (result.success) {
+        setShowSuccess(true);
+        // Reset form
+        setFormData({
+          nom: '',
+          prenom: '',
+          email: '',
+          telephone: '',
+          adresse: '',
+          ville: '',
+          codePostal: '',
+          ville2: '',
+          services: '',
+          servicesChoisis: ''
+        });
+      } else {
+        alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -162,6 +193,7 @@ const ContactForm = () => {
                             value={formData.nom}
                             onChange={handleInputChange}
                             className="form-input"
+                            required
                           />
                         </div>
                         <div className="form-group">
@@ -172,6 +204,7 @@ const ContactForm = () => {
                             value={formData.prenom}
                             onChange={handleInputChange}
                             className="form-input"
+                            required
                           />
                         </div>
                       </div>
@@ -184,6 +217,7 @@ const ContactForm = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="form-input"
+                          required
                         />
                         <input
                           type="tel"
@@ -192,6 +226,7 @@ const ContactForm = () => {
                           value={formData.telephone}
                           onChange={handleInputChange}
                           className="form-input"
+                          required
                         />
                       </div>
                     </div>
@@ -210,6 +245,7 @@ const ContactForm = () => {
                         value={formData.adresse}
                         onChange={handleInputChange}
                         className="form-input full-width"
+                        required
                       />
 
                       <div className="form-row three-columns">
@@ -220,6 +256,7 @@ const ContactForm = () => {
                           value={formData.ville}
                           onChange={handleInputChange}
                           className="form-input"
+                          required
                         />
                         <input
                           type="text"
@@ -228,6 +265,7 @@ const ContactForm = () => {
                           value={formData.codePostal}
                           onChange={handleInputChange}
                           className="form-input"
+                          required
                         />
                         <input
                           type="text"
@@ -236,6 +274,7 @@ const ContactForm = () => {
                           value={formData.ville2}
                           onChange={handleInputChange}
                           className="form-input"
+                          required
                         />
                       </div>
                     </div>
@@ -254,6 +293,7 @@ const ContactForm = () => {
                             value={formData.services}
                             onChange={handleInputChange}
                             className="form-select"
+                            required
                           >
                             <option value="">Sélectionnez un service</option>
                             <option value="lavage-vitres">LAVAGE DE VITRES</option>
@@ -278,10 +318,22 @@ const ContactForm = () => {
                     <button
                       type="submit"
                       className="submit-button"
+                      disabled={isLoading}
                     >
-                      <Send size={20} />
-                      Envoyer ma demande
+                      {isLoading ? (
+                        <>
+                          <div className="loading-spinner"></div>
+                          Envoi en cours...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={20} />
+                          Envoyer ma demande
+                        </>
+                      )}
                     </button>
+
+
                   </form>
 
                   <div className="form-footer">
@@ -295,6 +347,28 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+
+      {/* Success Popup Modal */}
+      {/* Success Popup Modal */}
+      {showSuccess && (
+        <div className="success-modal-overlay" onClick={() => setShowSuccess(false)}>
+          <div className="success-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="success-modal-content">
+              <div className="success-icon">✓</div>
+              <h3 className="success-title">Message envoyé avec succès!</h3>
+              <p className="success-message">
+                Votre demande de soumission a été envoyée. Nous vous contacterons dans les plus brefs délais.
+              </p>
+              <button 
+                className="success-close-button"
+                onClick={() => setShowSuccess(false)}
+              >
+                Fermer
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
