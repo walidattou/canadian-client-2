@@ -6,7 +6,7 @@ export const sendEmail = async (formData) => {
     console.log('Form data:', formData);
 
     // Initialize EmailJS
-    emailjs.init('47Sfd5g4f9BnD8uls');
+    emailjs.init('ctAAntPB_E3XfFqMB');
 
     // Ensure EmailJS is initialized
     await new Promise(resolve => setTimeout(resolve, 100));
@@ -31,10 +31,10 @@ export const sendEmail = async (formData) => {
 
     // Send email with new service key
     const result = await emailjs.send(
-      'service_s8qxfzc',     // New service ID
-      'template_gmlhh5g',    // Template ID
+      'service_1cxaqpb',     // New service ID
+      'template_o3rag3y',    // Template ID
       templateParams,
-      '47Sfd5g4f9BnD8uls'    // Public key
+      'ctAAntPB_E3XfFqMB'    // Public key
     );
 
     console.log('Email sent successfully:', result);
